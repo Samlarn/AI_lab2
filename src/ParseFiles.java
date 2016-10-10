@@ -46,6 +46,7 @@ public class ParseFiles {
 				        		faceImage.setImageRow(row, rowValues);
 				        	}
 				        	images.put(imageKey, faceImage);
+				        	images.get(imageKey).createImageArray();
 				        }
 				    }
 		    	}
@@ -80,6 +81,7 @@ public class ParseFiles {
 				        		faceImage.setImageRow(row, rowValues);
 				        	}
 				        	testImages.put(imageKey, faceImage);
+				        	testImages.get(imageKey).createImageArray();
 				        }
 				    }
 		    	}

@@ -11,7 +11,17 @@ public class Faces {
 
 
 		Perceptron perceptron = new Perceptron(args);
-		perceptron.learning();
+		for(int i = 0; i < 10; i++) {
+			perceptron.learning();
+		}
+
+
+//		for(int i = 0; i < 4; i++) {
+//			for(int j = 0; j < 5; j++) {
+//				System.out.print(", "+perceptron.getWeigths().get("Image31")[j][i]);
+//			}
+//			System.out.println();
+//		}
 
 
 
