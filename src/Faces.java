@@ -1,4 +1,3 @@
-import java.io.IOException;
 
 
 public class Faces {
@@ -10,17 +9,11 @@ public class Faces {
 			System.exit(-1);
 		}
 
-		ParseFiles parser = new ParseFiles();
 
-		try {
-			parser.parseImageFile(args[0]);
-			parser.parseFacitFile(args[1]);
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.exit(-1);
-		}
+		Perceptron perceptron = new Perceptron(args);
+		perceptron.learning();
 
-		parser.getImages().get("Image10").printImage();
-		System.out.println("Image35 "+parser.getImageResults().get("Image35"));
+
+
 	}
 }

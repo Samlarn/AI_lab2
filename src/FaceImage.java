@@ -3,9 +3,11 @@
 
 public class FaceImage {
 	private int[][] image;
+	private int[] imageAsArray;
 
 	public FaceImage() {
 		this.image = new int[20][20];
+		this.imageAsArray = new int[400];
 	}
 
 	public void setImageValue(int row, int col, int value) {
@@ -31,6 +33,23 @@ public class FaceImage {
 
 	public int getImageValueOf(int row, int col) {
 		return this.image[row][col];
+	}
+
+
+	public void createImageArray() {
+		int index = 0;
+	    for(int i = 0; i < 20; i++) {
+	    	for(int j = 0; j < 20; j++) {
+	    		imageAsArray[index] = image[i][j];
+	    		index++;
+	    	}
+	    }
+	}
+
+
+
+	public int[] getImageAsArray() {
+		return this.imageAsArray;
 	}
 
 
